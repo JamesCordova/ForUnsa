@@ -19,7 +19,7 @@ class ReactPost(Base):
     def save(self, *args, **kwargs):
         if self.pk is None:
             # Instance does not exist yet
-            self.reacts(self.post_reaction, 1)
+            self.reacts(self, self.post_reaction, 1)
         else:
             original_instance = ReactPost.objects.get(pk=self.pk)
 
