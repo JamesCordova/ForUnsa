@@ -156,14 +156,8 @@ REST_FRAMEWORK = {
 }
 
 # Email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMIAL_PORT = 587
-EMAIL_HOST_USER = 'forunsaapp@gmail.com'
-EMAIL_HOST_PASSWORD = 'zvgwjafdikwsvhyx'
-EMAIL_USE_TLS = True
-EMAIL_USER_SSL =  False
-
+EMAIL_BACKEND = "postmarker.backends.PostmarkBackend"
+POSTMARK_API_KEY = "e937776b-95a8-4a60-be94-e9c1373aee3f"
 
 # Cloudinary set up
 CLOUDINARY_STORAGE = {
