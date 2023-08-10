@@ -36,7 +36,7 @@ class ReactPost(Base):
                 self.reacts(original_instance, original_instance.post_reaction, -1)
                 self.reacts(self, self.post_reaction, 1)
                 
-            super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
             
     @staticmethod         
     def reacts(self, reaction, amount):
